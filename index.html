@@ -114,6 +114,13 @@ h2{font-size:26px;font-weight:800;letter-spacing:-.02em;margin-bottom:26px}
   padding:3px 10px;border-radius:100px;
 }
 
+.paper-link{
+  display:inline-flex;align-items:center;gap:8px;margin-top:18px;
+  padding:9px 14px;border:1px solid var(--trace);border-radius:5px;
+  color:var(--trace);font-size:13px;font-weight:700;cursor:pointer;
+}
+.paper-link:hover{background:var(--trace-soft);text-decoration:none}
+
 /* projects */
 .proj-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
 .proj{
@@ -128,6 +135,9 @@ h2{font-size:26px;font-weight:800;letter-spacing:-.02em;margin-bottom:26px}
   font-family:var(--mono);font-size:12.5px;color:var(--trace);
   font-weight:700;margin-top:12px;
 }
+
+.project-photo{margin:0 0 18px;overflow:hidden;border-radius:4px;background:var(--paper)}
+.project-photo img{display:block;width:100%;height:auto;aspect-ratio:16/10;object-fit:contain}
 
 /* career timeline */
 .timeline{border-left:2px solid var(--line);margin-left:6px;padding-left:26px}
@@ -237,6 +247,7 @@ footer{
       <span class="pill">Deep Learning</span>
       <span class="pill">국문논문집 게재</span>
     </div>
+    <a class="paper-link" href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE12731193" target="_blank" rel="noopener noreferrer" aria-label="인휠 모터 구동 차량의 심층 학습 기반 로그-멜 스펙트로그램 활용 고장 진단 알고리즘 논문 보기 (새 탭)">논문 보기 <span aria-hidden="true">↗</span></a>
   </div>
   <div class="research-card" style="margin-top:16px">
     <h3>딥러닝 기반 인휠모터 전기차의 진동 데이터 고장 진단 및 비전 기반 노면 인식</h3>
@@ -247,6 +258,7 @@ footer{
       <span class="pill">노면 인식</span>
       <span class="pill">학회 발표</span>
     </div>
+    <a class="paper-link" href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE12539611" target="_blank" rel="noopener noreferrer" aria-label="딥러닝 기반 인휠모터 전기차의 진동 데이터 고장 진단 및 비전 기반 노면 인식 논문 보기 (새 탭)">논문 보기 <span aria-hidden="true">↗</span></a>
   </div>
   <div class="research-card" style="margin-top:16px">
     <h3>LSTM을 활용한 인휠모터 전기차 고장진단</h3>
@@ -256,22 +268,7 @@ footer{
       <span class="pill">LSTM</span>
       <span class="pill">학회 발표</span>
     </div>
-  </div>
-  <div class="research-card" style="margin-top:16px">
-    <h3>Transformer 기반 인휠 모터 고장진단 (진행 중)</h3>
-    <p>
-      진동(반응적 감지)과 비전(예측적 관측)을 하나의 Transformer encoder에 얼리퓨전으로 결합하는 프레임워크를 설계하고 있습니다.
-      진동 9채널 시계열과 비전 RGB 영상을 각각 패치 토큰화해 함께 입력하고, [CLS] 토큰으로 고장 3-class 분류를,
-      비전 토큰 출력으로 도로 이벤트(방지턱·차선) 픽셀 분할을 동시에 수행하는 구조입니다.
-      기존 진동 단독·비전 단독 데이터는 결측 토큰 마스킹으로 함께 학습에 활용하고,
-      신규로 진동·영상 동기화 데이터를 수집(조건별 20~30 run)해 학습에 더할 계획입니다.
-    </p>
-    <div class="pill-row">
-      <span class="pill">Transformer</span>
-      <span class="pill">Early-Fusion</span>
-      <span class="pill">Multimodal</span>
-      <span class="pill">Segmentation</span>
-    </div>
+    <a class="paper-link" href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE12186212" target="_blank" rel="noopener noreferrer" aria-label="LSTM을 활용한 인휠모터 전기차 고장진단 논문 보기 (새 탭)">논문 보기 <span aria-hidden="true">↗</span></a>
   </div>
 </section>
 
@@ -280,6 +277,11 @@ footer{
   <h2>프로젝트</h2>
   <div class="proj-grid">
     <article class="proj">
+      <!-- 사진 업로드 후 아래 figure의 주석을 해제합니다.
+      <figure class="project-photo">
+        <img src="images/racing-positioning.jpg" alt="레이싱 차량 고정밀 포지셔닝 시스템 프로젝트 사진" width="800" height="500" loading="lazy" decoding="async">
+      </figure>
+      -->
       <p class="ptag">룩손레이싱 · GNSS/RTK · 2024.08~</p>
       <h3>레이싱 차량 고정밀 포지셔닝 시스템</h3>
       <p>GPS/RTK 기반 측위 시스템을 직접 설계·제작해 차량 운동을 분석하고,
@@ -287,6 +289,11 @@ footer{
       <p class="stat">측위 오차 2~5cm · 14랩 중 12랩(85.7%) 취득</p>
     </article>
     <article class="proj">
+      <!-- 사진 업로드 후 아래 figure의 주석을 해제합니다.
+      <figure class="project-photo">
+        <img src="images/electric-truck.jpg" alt="5톤 특장트럭용 2단 변속기 및 전기구동시스템 개발 프로젝트 사진" width="800" height="500" loading="lazy" decoding="async">
+      </figure>
+      -->
       <p class="ptag">진우에스엠씨 · 5톤 특장트럭 · 2022.04~2024.06</p>
       <h3>5톤 특장트럭용 2단 변속기 및 전기구동시스템 개발</h3>
       <p>기존 HVPD/LVPD가 안전 기준에 미달함을 확인하고 처음부터 재설계했습니다.
@@ -294,6 +301,11 @@ footer{
       <p class="stat">HVPD/LVPD 재설계 · CAN 기반 변속 제어로직</p>
     </article>
     <article class="proj">
+      <!-- 사진 업로드 후 아래 figure의 주석을 해제합니다.
+      <figure class="project-photo">
+        <img src="images/electric-firetruck.jpg" alt="전복방지 차체 제어기술 적용 전기소방차 베어섀시 개발 프로젝트 사진" width="800" height="500" loading="lazy" decoding="async">
+      </figure>
+      -->
       <p class="ptag">진우에스엠씨 · 5톤급 전기소방차 · 2023.04~2024.06</p>
       <h3>전복방지 차체 제어기술 적용 전기소방차 베어섀시 개발</h3>
       <p>급선회 경사로 주행 시 전복 위험을 낮추기 위해 IMU 센서값과 유압 서스펜션을 CAN 통신으로 연동한
@@ -301,6 +313,11 @@ footer{
       <p class="stat">IMU 연동 전복방지 제어로직</p>
     </article>
     <article class="proj">
+      <!-- 사진 업로드 후 아래 figure의 주석을 해제합니다.
+      <figure class="project-photo">
+        <img src="images/firefighting-robot.jpg" alt="트랙기반 화재 진압용 모바일 로봇 개발 프로젝트 사진" width="800" height="500" loading="lazy" decoding="async">
+      </figure>
+      -->
       <p class="ptag">진우에스엠씨 · 소방 로봇 · 2023.06~2024.06</p>
       <h3>트랙기반 화재 진압용 모바일 로봇 개발</h3>
       <p>전장 파트 단독 담당자로 고온·진동·협소 공간 환경에서 요구되는 배터리, 인버터, 모터, 엔코더 등
@@ -308,6 +325,11 @@ footer{
       <p class="stat">전장 시스템 단독 설계</p>
     </article>
     <article class="proj">
+      <!-- 사진 업로드 후 아래 figure의 주석을 해제합니다.
+      <figure class="project-photo">
+        <img src="images/autonomous-combine.jpg" alt="콤바인 농로 자율주행 CAN·RTK 연동 프로젝트 사진" width="800" height="500" loading="lazy" decoding="async">
+      </figure>
+      -->
       <p class="ptag">대동 · 콤바인 자율주행 · 2024.07~2024.12</p>
       <h3>콤바인 농로 자율주행 CAN·RTK 연동</h3>
       <p>콤바인 농로 자율주행 과제에서 CAN 통신 기반 RTK 데이터 변환과
