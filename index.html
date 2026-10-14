@@ -127,7 +127,7 @@ h2{font-size:26px;font-weight:800;letter-spacing:-.02em;margin-bottom:26px}
   background:var(--card);border:1px solid var(--line);border-radius:6px;
   padding:24px 26px;transition:border-color .2s, transform .2s;
 }
-.proj--racing,.proj--truck,.proj--firetruck{grid-column:1/-1}
+.proj--racing,.proj--truck,.proj--firetruck,.proj--combine{grid-column:1/-1}
 .proj:hover{border-color:var(--trace);transform:translateY(-2px)}
 .proj .ptag{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;color:var(--muted);margin-bottom:10px}
 .proj h3{font-size:16.5px;font-weight:700;margin-bottom:8px;letter-spacing:-.01em}
@@ -357,12 +357,21 @@ footer{
       전장 장비 전체를 선정하고 저전압 하네스 설계와 초기 제어로직 구현을 수행했습니다.</p>
       <p class="stat">전장 시스템 단독 설계</p>
     </article>
-    <article class="proj">
-      <!-- 사진 업로드 후 아래 figure의 주석을 해제합니다.
-      <figure class="project-photo">
-        <img src="images/autonomous-combine.jpg" alt="콤바인 농로 자율주행 CAN·RTK 연동 프로젝트 사진" width="800" height="500" loading="lazy" decoding="async">
-      </figure>
-      -->
+    <article class="proj proj--combine" id="autonomous-combine">
+      <div class="project-gallery" aria-label="콤바인 자율주행 CAN 및 RTK 연동 자료">
+        <figure class="project-photo">
+          <a href="images/combine-hardware.png" target="_blank" rel="noopener noreferrer" aria-label="CAN 및 RTK 연동 하드웨어 크게 보기 (새 탭)">
+            <img src="images/combine-hardware.png" alt="MCP2515, 제어보드, ZED-F9R로 구성한 콤바인 CAN 및 RTK 연동 하드웨어" width="871" height="549" loading="lazy" decoding="async">
+          </a>
+          <figcaption>CAN 및 RTK 연동 하드웨어</figcaption>
+        </figure>
+        <figure class="project-photo">
+          <a href="images/combine-can-dbc.png" target="_blank" rel="noopener noreferrer" aria-label="GNSS 및 IMU CAN 메시지 정의 화면 크게 보기 (새 탭)">
+            <img src="images/combine-can-dbc.png" alt="Vector CANdb++에서 GNSS 위치와 IMU 가속도 및 각속도 신호를 정의한 DBC 화면" width="1247" height="651" loading="lazy" decoding="async">
+          </a>
+          <figcaption>GNSS 및 IMU CAN 메시지 정의</figcaption>
+        </figure>
+      </div>
       <p class="ptag">대동 · 콤바인 자율주행 · 2024.07~2024.12</p>
       <h3>콤바인 농로 자율주행 CAN·RTK 연동</h3>
       <p>콤바인 농로 자율주행 과제에서 CAN 통신 기반 RTK 데이터 변환과
