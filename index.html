@@ -127,7 +127,7 @@ h2{font-size:26px;font-weight:800;letter-spacing:-.02em;margin-bottom:26px}
   background:var(--card);border:1px solid var(--line);border-radius:6px;
   padding:24px 26px;transition:border-color .2s, transform .2s;
 }
-.proj--racing,.proj--truck,.proj--firetruck,.proj--combine{grid-column:1/-1}
+.proj--racing,.proj--truck,.proj--firetruck,.proj--combine,.proj--robot{grid-column:1/-1}
 .proj:hover{border-color:var(--trace);transform:translateY(-2px)}
 .proj .ptag{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;color:var(--muted);margin-bottom:10px}
 .proj h3{font-size:16.5px;font-weight:700;margin-bottom:8px;letter-spacing:-.01em}
@@ -344,13 +344,21 @@ footer{
       전복방지 제어로직을 직접 설계·구현했습니다. 전장부품 선정과 하네스 제작도 병행했습니다.</p>
       <p class="stat">IMU 연동 전복방지 제어로직</p>
     </article>
-    <article class="proj">
-      <figure class="project-photo project-photo--single">
+    <article class="proj proj--robot" id="firefighting-robot">
+      <div class="project-gallery" aria-label="모바일 로봇 전장 회로도와 시스템 구성">
+      <figure class="project-photo">
         <a href="images/firefighting-robot-circuit.png" target="_blank" rel="noopener noreferrer" aria-label="화재 진압용 모바일 로봇 전장 회로도 크게 보기 (새 탭)">
           <img src="images/firefighting-robot-circuit.png" alt="트랙기반 화재 진압용 모바일 로봇의 전원과 제어기 연결 회로도" width="872" height="667" loading="lazy" decoding="async">
         </a>
         <figcaption>화재 진압용 모바일 로봇 전장 회로도</figcaption>
       </figure>
+        <figure class="project-photo">
+          <a href="images/firefighting-robot-layout.png" target="_blank" rel="noopener noreferrer" aria-label="화재 진압용 모바일 로봇 시스템 구성도 크게 보기 (새 탭)">
+            <img src="images/firefighting-robot-layout.png" alt="트랙기반 화재 진압용 모바일 로봇의 방수포, 충전 시스템, 수관 시스템과 구동 시스템 구성도" width="826" height="379" loading="lazy" decoding="async">
+          </a>
+          <figcaption>모바일 로봇 시스템 구성도</figcaption>
+        </figure>
+      </div>
       <p class="ptag">진우에스엠씨 · 소방 로봇 · 2023.06~2024.06</p>
       <h3>트랙기반 화재 진압용 모바일 로봇 개발</h3>
       <p>전장 파트 단독 담당자로 고온·진동·협소 공간 환경에서 요구되는 배터리, 인버터, 모터, 엔코더 등
