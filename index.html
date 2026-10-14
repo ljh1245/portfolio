@@ -127,7 +127,7 @@ h2{font-size:26px;font-weight:800;letter-spacing:-.02em;margin-bottom:26px}
   background:var(--card);border:1px solid var(--line);border-radius:6px;
   padding:24px 26px;transition:border-color .2s, transform .2s;
 }
-.proj--racing{grid-column:1/-1}
+.proj--racing,.proj--truck{grid-column:1/-1}
 .proj:hover{border-color:var(--trace);transform:translateY(-2px)}
 .proj .ptag{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;color:var(--muted);margin-bottom:10px}
 .proj h3{font-size:16.5px;font-weight:700;margin-bottom:8px;letter-spacing:-.01em}
@@ -301,12 +301,21 @@ footer{
       IMU 가속도 데이터와 MOTEC 데이터 로거로 주행 데이터를 수집·분석했습니다. CAN 배선 추가 등 전장 업무도 병행했습니다.</p>
       <p class="stat">측위 오차 2~5cm</p>
     </article>
-    <article class="proj">
-      <!-- 사진 업로드 후 아래 figure의 주석을 해제합니다.
-      <figure class="project-photo">
-        <img src="images/electric-truck.jpg" alt="5톤 특장트럭용 2단 변속기 및 전기구동시스템 개발 프로젝트 사진" width="800" height="500" loading="lazy" decoding="async">
-      </figure>
-      -->
+    <article class="proj proj--truck" id="electric-truck">
+      <div class="project-gallery" aria-label="5톤 특장트럭 전장 설계와 연동 시험 자료">
+        <figure class="project-photo">
+          <a href="images/electric-truck-circuit.png" target="_blank" rel="noopener noreferrer" aria-label="전장 시스템 회로도 크게 보기 (새 탭)">
+            <img src="images/electric-truck-circuit.png" alt="5톤 특장트럭 전장 시스템의 제어기와 부품 연결 회로도" width="743" height="610" loading="lazy" decoding="async">
+          </a>
+          <figcaption>전장 시스템 회로도</figcaption>
+        </figure>
+        <figure class="project-photo">
+          <a href="images/electric-truck-test.gif" target="_blank" rel="noopener noreferrer" aria-label="제어기 및 계기판 연동 시험 화면 크게 보기 (새 탭)">
+            <img src="images/electric-truck-test.gif" alt="노트북과 계기판을 연결한 제어기 연동 시험 화면" width="400" height="225" loading="lazy" decoding="async">
+          </a>
+          <figcaption>제어기 및 계기판 연동 시험</figcaption>
+        </figure>
+      </div>
       <p class="ptag">진우에스엠씨 · 5톤 특장트럭 · 2022.04~2024.06</p>
       <h3>5톤 특장트럭용 2단 변속기 및 전기구동시스템 개발</h3>
       <p>기존 HVPD/LVPD가 안전 기준에 미달함을 확인하고 처음부터 재설계했습니다.
