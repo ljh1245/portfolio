@@ -127,6 +127,7 @@ h2{font-size:26px;font-weight:800;letter-spacing:-.02em;margin-bottom:26px}
   background:var(--card);border:1px solid var(--line);border-radius:6px;
   padding:24px 26px;transition:border-color .2s, transform .2s;
 }
+.proj--racing{grid-column:1/-1}
 .proj:hover{border-color:var(--trace);transform:translateY(-2px)}
 .proj .ptag{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;color:var(--muted);margin-bottom:10px}
 .proj h3{font-size:16.5px;font-weight:700;margin-bottom:8px;letter-spacing:-.01em}
@@ -136,8 +137,11 @@ h2{font-size:26px;font-weight:800;letter-spacing:-.02em;margin-bottom:26px}
   font-weight:700;margin-top:12px;
 }
 
-.project-photo{margin:0 0 18px;overflow:hidden;border-radius:4px;background:var(--paper)}
-.project-photo img{display:block;width:100%;height:auto;aspect-ratio:16/10;object-fit:contain}
+.project-gallery{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:20px}
+.project-photo{margin:0;overflow:hidden;border:1px solid var(--line);border-radius:4px;background:var(--paper)}
+.project-photo a{display:block;cursor:zoom-in}
+.project-photo img{display:block;width:100%;height:auto}
+.project-photo figcaption{padding:8px 10px;font-size:12px;color:var(--muted);border-top:1px solid var(--line)}
 
 /* career timeline */
 .timeline{border-left:2px solid var(--line);margin-left:6px;padding-left:26px}
@@ -184,7 +188,7 @@ footer{
 }
 
 @media(max-width:720px){
-  .proj-grid,.skill-grid{grid-template-columns:1fr}
+  .proj-grid,.skill-grid,.project-gallery{grid-template-columns:1fr}
   nav ul{display:none}
   section{padding:56px 0 8px}
 }
@@ -276,12 +280,21 @@ footer{
   <p class="ch">CH.02 — PROJECTS</p>
   <h2>프로젝트</h2>
   <div class="proj-grid">
-    <article class="proj">
-      <!-- 사진 업로드 후 아래 figure의 주석을 해제합니다.
-      <figure class="project-photo">
-        <img src="images/racing-positioning.jpg" alt="레이싱 차량 고정밀 포지셔닝 시스템 프로젝트 사진" width="800" height="500" loading="lazy" decoding="async">
-      </figure>
-      -->
+    <article class="proj proj--racing">
+      <div class="project-gallery" aria-label="레이싱 주행 데이터 분석 화면">
+        <figure class="project-photo">
+          <a href="images/racing-motec.webp" target="_blank" rel="noopener noreferrer" aria-label="MoTeC 주행 데이터 분석 화면 크게 보기 (새 탭)">
+            <img src="images/racing-motec.webp" alt="MoTeC에서 댐퍼 변위, 가속도, 타이어 온도와 주행 속도를 분석한 화면" width="1345" height="642" loading="lazy" decoding="async">
+          </a>
+          <figcaption>MoTeC 주행 데이터 분석</figcaption>
+        </figure>
+        <figure class="project-photo">
+          <a href="images/racing-analysis.webp" target="_blank" rel="noopener noreferrer" aria-label="GNSS 주행 경로와 가속도 분석 화면 크게 보기 (새 탭)">
+            <img src="images/racing-analysis.webp" alt="Racing Analyze의 가속도 분포, 시간별 속도와 GNSS 주행 경로 분석 화면" width="1426" height="764" loading="lazy" decoding="async">
+          </a>
+          <figcaption>GNSS 주행 경로와 가속도 분석</figcaption>
+        </figure>
+      </div>
       <p class="ptag">룩손레이싱 · GNSS/RTK · 2024.08~</p>
       <h3>레이싱 차량 고정밀 포지셔닝 시스템</h3>
       <p>GPS/RTK 기반 측위 시스템을 직접 설계·제작해 차량 운동을 분석하고,
